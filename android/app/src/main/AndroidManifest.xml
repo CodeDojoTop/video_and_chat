@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.chat_and_video">
+    package="com.dojo.chat_and_video">
    <application
         android:label="chat_and_video"
         android:icon="@mipmap/ic_launcher">
