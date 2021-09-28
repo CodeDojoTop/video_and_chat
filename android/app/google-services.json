@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "136694739077",
+    "project_id": "dojo-video-chat",
+    "storage_bucket": "dojo-video-chat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:136694739077:android:1e483b7425c0314be739ec",
+        "android_client_info": {
+          "package_name": "com.dojo.chat_and_video"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "136694739077-3pm1amqp7gpo2av8vedaa7692grn8d3t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBN7R-ambhcGvwxCsllkR16DyN3xXiL0eY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "136694739077-3pm1amqp7gpo2av8vedaa7692grn8d3t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
