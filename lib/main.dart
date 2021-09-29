@@ -1,8 +1,25 @@
+import 'dart:html';
+
+import 'package:chat_and_video/domain/authentication/repositories/authentication_repository.dart';
+import 'package:chat_and_video/domain/authentication/use_cases/login_use_case.dart';
+import 'package:chat_and_video/presentation/pages/login/login_controller.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
+
+GetIt getIt = GetIt.instance;
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+
+  getIt.registerFactory(
+      () => AuthenticationRepository(authInstance: FirebaseAuth.instance));
+
+  getIt.registerFactory(() => LoginUseCase(GetIt.I.get()));
+
+  getIt.registerFactory(() => LoginController(login: GetIt.I.get()));
+
   runApp(App());
 }
 
