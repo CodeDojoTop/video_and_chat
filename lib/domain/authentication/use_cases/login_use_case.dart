@@ -8,7 +8,7 @@ class LoginUseCase {
 
   LoginUseCase(this.authenticationRepository);
 
-  Future<Either<Failure, UserCredential>> login(
+  Future<Either<Failure, UserCredential?>> login(
       String email, String password) async {
     return authenticationRepository.login(email, password);
   }

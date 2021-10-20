@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:chat_and_video/domain/authentication/repositories/authentication_repository.dart';
 import 'package:chat_and_video/domain/authentication/use_cases/login_use_case.dart';
 import 'package:chat_and_video/presentation/pages/login/login_controller.dart';
@@ -10,8 +8,9 @@ import 'package:get_it/get_it.dart';
 
 GetIt getIt = GetIt.instance;
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
 
   getIt.registerFactory(
       () => AuthenticationRepository(authInstance: FirebaseAuth.instance));

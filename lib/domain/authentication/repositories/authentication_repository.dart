@@ -9,7 +9,7 @@ class AuthenticationRepository {
 
   AuthenticationRepository({required this.authInstance});
 
-  Future<Either<Failure, UserCredential>> login(
+  Future<Either<Failure, UserCredential?>> login(
       String email, String password) async {
     try {
       UserCredential userCredential =
@@ -19,9 +19,7 @@ class AuthenticationRepository {
       );
       return Right(userCredential);
     } on FirebaseAuthException catch (e) {
-      return Left(
-        LoginFailure(),
-      );
+      return Left(LoginFailure());
     } catch (e) {
       return Left(UnknownFailure());
     }
